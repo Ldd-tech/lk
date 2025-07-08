@@ -1,0 +1,19 @@
+# GPS 配置参数 - 针对RDK X5优化
+gps_driver:
+  ros__parameters:
+    port: "/dev/ttyS1"                  # RDK X5 UART1设备节点
+    baudrate: 9600                      # 波特率（大多数GPS模块默认）
+    timeout: 0.5                        # 更短的串口超时（秒）
+    frame_id: "gps"                     # TF坐标系名称
+    child_frame_id: "gps_link"          # 子坐标系名称
+    marker_scale: 3.0                   # 标记尺寸（适当缩小）
+    trail_length: 100                   # 轨迹点数量（增加轨迹长度）
+    utm_zone: 50                        # UTM区域号（中国武汉附近）
+    publish_rate: 5.0                   # 发布频率(Hz)（提高更新率）
+    retry_interval: 1.0                 # 重试间隔(秒)（缩短重试时间）
+    qos_depth: 20                       # QoS队列深度（增加缓冲区）
+    max_retries: 10                     # 最大重试次数（增加重试次数）
+    hdop_threshold: 3.0                 # 最大允许HDOP值（更严格）
+    enable_cold_start_wait: true        # 启用冷启动等待
+    cold_start_wait: 30.0               # 冷启动等待时间(秒)
+    enable_config_commands: true        # 启用GPS模块配置命令

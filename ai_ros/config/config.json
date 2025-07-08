@@ -1,0 +1,10 @@
+{
+    "api_key": "970c4948-f85f-41ab-913d-2fab26695325",
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+    "model": "doubao-1-5-vision-pro-32k-250115",
+    "serial_port": "/dev/myspeech",
+    "serial_baudrate": 115200,
+    "max_send_times": 100,
+    "frame_send_rate": 30
+  }
+  
